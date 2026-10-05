@@ -1,0 +1,1562 @@
+/* ================================
+   General
+================================ */
+/*Shiv panchal
+  ITEC 362-J10 */
+
+:root {
+  --red: #ff0000;
+  --black: #000000;
+  --white: #ffffff;
+  --page-gray: #e3e3e3;
+  --light-text: #d0d0d0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--page-gray);
+  color: var(--black);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* ================================
+   Header
+================================ */
+
+.site-header {
+  height: 84px;
+  display: flex;
+  align-items: center;
+
+  padding: 0 18px;
+
+  background: var(--black);
+  color: var(--white);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+
+  width: 265px;
+  height: 100%;
+}
+
+.logo img {
+  width: 245px;
+  height: auto;
+  display: block;
+}
+
+
+/* Navigation */
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 36px;
+
+  flex: 1;
+  height: 100%;
+}
+
+nav a {
+  display: flex;
+  align-items: center;
+
+  height: 100%;
+
+  color: var(--white);
+  text-decoration: none;
+
+  font-size: 24px;
+  font-weight: 400;
+
+  white-space: nowrap;
+}
+
+nav a:hover,
+nav a.active {
+  color: var(--white);
+}
+
+
+/* =================================
+   HOME PAGE - LARGER SIZING
+================================= */
+
+/* Hero */
+
+.hero {
+  min-height: 360px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 45px 7%;
+
+  background: var(--red);
+  color: var(--white);
+}
+
+.hero-text {
+  max-width: 650px;
+}
+
+.hero h1 {
+  margin: 0;
+
+  font-size: 60px;
+  line-height: 1.05;
+  font-weight: 700;
+}
+
+.hero-text p {
+  margin: 18px 0 38px;
+
+  font-size: 22px;
+  line-height: 1.4;
+}
+
+
+/* View Schedule button */
+
+.hero .button {
+  padding: 15px 25px;
+
+  font-size: 18px;
+  font-weight: 700;
+}
+
+
+/* Baku circuit */
+
+.hero-visual {
+  width: 420px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-right: 2%;
+}
+
+.hero-visual svg {
+  width: 100%;
+  height: auto;
+}
+
+.hero-visual p {
+  margin: 8px 0 0;
+
+  font-size: 15px;
+  font-weight: 700;
+}
+
+
+/* =================================
+   HOME CARDS
+================================= */
+
+.quick-updates {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 45px;
+
+  padding: 35px 5%;
+}
+
+.info-card {
+  min-height: 235px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 25px;
+
+  background: var(--black);
+  color: var(--white);
+
+  border-radius: 6px;
+
+  text-align: center;
+}
+
+.card-icon {
+  height: 75px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-icon svg {
+  width: 65px;
+  height: 65px;
+}
+
+.info-card h2 {
+  margin: 12px 0 10px;
+
+  font-size: 28px;
+  line-height: 1.2;
+}
+
+.info-card p {
+  margin: 0;
+
+  font-size: 17px;
+  line-height: 1.4;
+
+  color: #d5d5d5;
+}
+
+
+/* =================================
+   HOME LATEST NEWS
+================================= */
+
+.latest-news {
+  width: 90%;
+  max-width: 1200px;
+  min-height: 190px;
+
+  margin: 5px auto 45px;
+
+  display: grid;
+  grid-template-columns: 250px 1fr 170px;
+  align-items: center;
+
+  padding: 25px 40px;
+
+  background: var(--white);
+}
+
+.news-heading h2 {
+  margin: 0 0 10px;
+
+  font-size: 27px;
+  font-weight: 700;
+}
+
+.news-image {
+  width: 150px;
+  height: 110px;
+
+  margin: 0 auto;
+
+  overflow: hidden;
+
+  border-radius: 5px;
+}
+
+.news-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.news-content {
+  padding-left: 15px;
+}
+
+.news-content h2 {
+  margin: 0 0 25px;
+
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.news-content p {
+  margin: 0;
+
+  color: #777777;
+
+  font-size: 17px;
+}
+
+.read-more {
+  justify-self: end;
+
+  color: var(--red);
+
+  font-size: 17px;
+  font-weight: 700;
+
+  text-decoration: none;
+}
+
+
+/* =================================
+   HOME MOBILE
+================================= */
+
+@media (max-width: 900px) {
+
+  .hero {
+    min-height: auto;
+
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 35px;
+
+    padding: 40px 30px;
+  }
+
+  .hero h1 {
+    font-size: 44px;
+  }
+
+  .hero-text p {
+    font-size: 19px;
+  }
+
+  .hero-visual {
+    width: min(400px, 90%);
+
+    margin: 0 auto;
+  }
+
+  .quick-updates {
+    grid-template-columns: 1fr;
+
+    gap: 22px;
+
+    padding: 30px;
+  }
+
+  .info-card {
+    min-height: 210px;
+  }
+
+  .latest-news {
+    width: auto;
+
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+
+    margin: 0 30px 40px;
+
+    text-align: center;
+  }
+
+  .news-content {
+    padding-left: 0;
+  }
+
+  .read-more {
+    justify-self: center;
+  }
+}
+/* =================================
+   SCHEDULE PAGE - LARGER SIZING
+================================= */
+
+.schedule-hero {
+  min-height: 190px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 30px 7%;
+
+  background: var(--red);
+  color: var(--white);
+}
+
+.schedule-hero h1 {
+  margin: 0;
+
+  font-size: 56px;
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+
+/* Main schedule area */
+
+.schedule-section {
+  padding: 28px 5% 45px;
+
+  background: #e3e3e3;
+}
+
+.schedule-section h2 {
+  margin: 0 0 20px;
+
+  font-size: 40px;
+  line-height: 1.2;
+}
+
+
+/* Race list */
+
+.race-list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 20px;
+}
+
+
+/* Full race box */
+
+.race-card {
+  overflow: hidden;
+
+  background: var(--white);
+
+  border-radius: 6px;
+}
+
+
+/* Remove default details arrow */
+
+.race-card summary {
+  list-style: none;
+}
+
+.race-card summary::-webkit-details-marker {
+  display: none;
+}
+
+
+/* Main visible portion */
+
+.race-top {
+  min-height: 110px;
+
+  display: flex;
+  align-items: center;
+
+  cursor: pointer;
+}
+
+
+/* Red date box */
+
+.race-date {
+  width: 155px;
+  min-height: 110px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--red);
+  color: var(--white);
+
+  text-align: center;
+}
+
+.race-date span {
+  font-size: 31px;
+  font-weight: 700;
+
+  line-height: 1;
+}
+
+.race-date strong {
+  margin-top: 6px;
+
+  font-size: 28px;
+  font-weight: 700;
+
+  line-height: 1;
+}
+
+
+/* Race name */
+
+.race-name {
+  flex: 1;
+
+  padding-left: 42px;
+}
+
+.race-name h3 {
+  margin: 0;
+
+  font-size: 32px;
+  font-weight: 400;
+}
+
+
+/* Dropdown arrow area */
+
+.race-arrow {
+  width: 95px;
+  min-height: 110px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+}
+
+
+/* Arrow */
+
+.race-arrow::before {
+  content: "";
+
+  width: 22px;
+  height: 22px;
+
+  border-right: 3px solid var(--red);
+  border-bottom: 3px solid var(--red);
+
+  transform: rotate(45deg);
+
+  transition: transform 0.2s ease;
+}
+
+
+/* Arrow when open */
+
+.race-card[open] .race-arrow::before {
+  transform: rotate(225deg);
+}
+
+
+/* =================================
+   DROPDOWN SESSION INFORMATION
+================================= */
+
+.race-details {
+  padding: 15px 40px 22px;
+
+  border-top: 1px solid #dddddd;
+}
+
+.session {
+  min-height: 55px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 12px 15px;
+
+  border-bottom: 1px solid #eeeeee;
+
+  font-size: 19px;
+}
+
+.session:last-child {
+  border-bottom: none;
+}
+
+.session strong {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.session span {
+  color: #555555;
+
+  font-size: 18px;
+}
+
+
+/* Small hover effect */
+
+.race-card:hover {
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =================================
+   SCHEDULE MOBILE
+================================= */
+
+@media (max-width: 700px) {
+
+  .schedule-hero {
+    min-height: 160px;
+  }
+
+  .schedule-hero h1 {
+    font-size: 42px;
+  }
+
+  .schedule-section {
+    padding: 25px 20px 40px;
+  }
+
+  .schedule-section h2 {
+    font-size: 32px;
+  }
+
+  .race-top {
+    min-height: 90px;
+  }
+
+  .race-date {
+    width: 110px;
+    min-height: 90px;
+  }
+
+  .race-date span {
+    font-size: 24px;
+  }
+
+  .race-date strong {
+    font-size: 21px;
+  }
+
+  .race-name {
+    padding-left: 20px;
+  }
+
+  .race-name h3 {
+    font-size: 22px;
+  }
+
+  .race-arrow {
+    width: 60px;
+    min-height: 90px;
+  }
+
+  .race-arrow::before {
+    width: 17px;
+    height: 17px;
+  }
+
+  .race-details {
+    padding: 12px 18px 18px;
+  }
+
+  .session {
+    min-height: 65px;
+
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    gap: 5px;
+
+    font-size: 16px;
+  }
+
+  .session strong {
+    font-size: 17px;
+  }
+
+  .session span {
+    font-size: 16px;
+  }
+}
+/* =================================
+   CHAMPIONSHIPS PAGE
+================================= */
+
+.championship-hero {
+  min-height: 190px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 25px 7%;
+
+  background: var(--red);
+  color: var(--white);
+}
+
+.championship-hero h1 {
+  margin: 0 0 14px;
+
+  font-size: 56px;
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+.championship-hero p {
+  margin: 0;
+
+  font-size: 24px;
+  line-height: 1.4;
+}
+
+
+/* Main championship area */
+
+.championship-section {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 75px;
+
+  padding: 28px 5% 45px;
+
+  background: #e3e3e3;
+}
+
+
+/* Each championship column */
+
+.championship-column {
+  display: flex;
+  flex-direction: column;
+
+  gap: 38px;
+}
+
+
+/* ================================
+   Leader cards
+================================ */
+
+.leader-card {
+  min-height: 330px;
+
+  padding: 28px 30px;
+
+  background: var(--black);
+  color: var(--white);
+
+  border-radius: 5px;
+}
+
+.leader-card h2 {
+  margin: 0 0 36px;
+
+  font-size: 27px;
+  font-weight: 700;
+}
+
+.leader-card h3 {
+  margin: 0;
+
+  text-align: center;
+
+  font-size: 46px;
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+
+/* Points */
+
+.leader-points {
+  margin-top: 28px;
+
+  text-align: center;
+}
+
+.leader-points span {
+  display: block;
+
+  color: var(--red);
+
+  font-size: 52px;
+  line-height: 1;
+}
+
+.leader-points p {
+  margin: 8px 0 0;
+
+  font-size: 45px;
+  line-height: 1;
+}
+
+
+/* ================================
+   Standings
+================================ */
+
+.standings-card {
+  min-height: 300px;
+
+  padding: 25px 32px;
+
+  background: var(--black);
+  color: var(--white);
+
+  border-radius: 5px;
+}
+
+.standings-card p {
+  margin: 0 0 7px;
+
+  font-size: 29px;
+  line-height: 1.15;
+}
+
+.standings-card p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* Driver surname colors */
+
+.russell {
+  color: #2ed9d0;
+}
+
+.hamilton {
+  color: #ff0000;
+}
+
+.norris {
+  color: #ff8700;
+}
+
+.leclerc {
+  color: #ff0000;
+}
+
+.verstappen {
+  color: #4422cc;
+}
+
+.piastri {
+  color: #ff8700;
+}
+
+.hadjar {
+  color: #4433dd;
+}
+
+
+/* ================================
+   Championship Responsive Design
+================================ */
+
+@media (max-width: 900px) {
+
+  .championship-hero {
+    min-height: 160px;
+
+    padding: 30px;
+  }
+
+  .championship-hero h1 {
+    font-size: 44px;
+  }
+
+  .championship-hero p {
+    font-size: 20px;
+  }
+
+  .championship-section {
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+
+    padding: 30px;
+  }
+
+  .championship-column {
+    gap: 20px;
+  }
+
+  .leader-card {
+    min-height: 290px;
+  }
+
+  .leader-card h3 {
+    font-size: 40px;
+  }
+
+  .standings-card p {
+    font-size: 25px;
+  }
+}
+/* =================================
+   BEGINNER'S GUIDE
+================================= */
+
+.guide-hero {
+  min-height: 190px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 28px 7%;
+
+  background: var(--red);
+  color: var(--white);
+}
+
+.guide-hero h1 {
+  margin: 0 0 15px;
+
+  font-size: 52px;
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+.guide-hero p {
+  margin: 0;
+
+  font-size: 22px;
+  line-height: 1.4;
+}
+
+
+/* Guide section */
+
+.guide-section {
+  display: flex;
+  flex-direction: column;
+
+  gap: 25px;
+
+  padding: 28px 4.5% 40px;
+
+  background: #e3e3e3;
+}
+
+
+/* Main guide cards */
+
+.guide-card {
+  min-height: 245px;
+
+  padding: 22px 28px;
+
+  background: var(--black);
+  color: var(--white);
+
+  border-radius: 5px;
+}
+
+.guide-card h2 {
+  margin: 0 0 20px;
+
+  text-align: center;
+
+  font-size: 27px;
+  line-height: 1.2;
+}
+
+
+/* Text + image */
+
+.guide-content {
+  min-height: 150px;
+
+  display: grid;
+  grid-template-columns: 1fr 220px;
+
+  gap: 35px;
+
+  align-items: center;
+}
+
+.guide-content.reverse {
+  grid-template-columns: 220px 1fr;
+}
+
+
+/* Text */
+
+.guide-text p {
+  margin: 0;
+
+  font-size: 17px;
+  line-height: 1.4;
+}
+
+
+/* Red highlighted words */
+
+.red-text {
+  color: var(--red);
+  font-weight: 700;
+}
+
+
+/* Images */
+
+.guide-image {
+  width: 220px;
+  height: 145px;
+
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 3px;
+}
+
+.guide-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+
+/* Ready card */
+
+.ready-card {
+  min-height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 20px;
+
+  background: var(--black);
+  color: var(--white);
+}
+
+.ready-card h2 {
+  margin: 0;
+
+  font-size: 18px;
+}
+
+.ready-card a {
+  padding: 9px 17px;
+
+  background: var(--red);
+  color: var(--white);
+
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+
+/* =================================
+   Beginner Guide Mobile
+================================= */
+
+@media (max-width: 800px) {
+
+  .guide-hero {
+    min-height: 160px;
+
+    padding: 25px 30px;
+  }
+
+  .guide-hero h1 {
+    font-size: 40px;
+  }
+
+  .guide-hero p {
+    font-size: 19px;
+  }
+
+  .guide-section {
+    padding: 25px 20px 35px;
+  }
+
+  .guide-card {
+    padding: 22px;
+  }
+
+  .guide-content,
+  .guide-content.reverse {
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+  }
+
+  .guide-image {
+    width: 100%;
+    height: 190px;
+  }
+
+  .guide-text p {
+    font-size: 16px;
+  }
+
+  .ready-card {
+    min-height: 60px;
+  }
+}
+/* =================================
+   FEEDBACK PAGE
+================================= */
+
+.feedback-hero {
+  min-height: 190px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 28px 10%;
+
+  background: var(--red);
+  color: var(--white);
+}
+
+.feedback-hero h1 {
+  margin: 0 0 14px;
+
+  font-size: 52px;
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+.feedback-hero p {
+  margin: 0;
+
+  font-size: 23px;
+}
+
+
+/* Main gray area */
+
+.feedback-section {
+  padding: 45px 5% 55px;
+
+  background: #e3e3e3;
+}
+
+
+/* White form box */
+
+.feedback-form {
+  max-width: 1100px;
+  min-height: 650px;
+
+  margin: 0 auto;
+
+  padding: 38px 48px;
+
+  background: var(--white);
+
+  border-radius: 6px;
+}
+
+
+/* Form groups */
+
+.form-group {
+  margin-bottom: 28px;
+}
+
+
+/* Labels */
+
+.form-group label {
+  display: block;
+
+  margin-bottom: 10px;
+
+  font-size: 23px;
+  font-weight: 700;
+}
+
+
+/* Inputs */
+
+.form-group input {
+  width: 330px;
+  height: 55px;
+
+  padding: 0 18px;
+
+  border: none;
+  outline: none;
+
+  background: #dddddd;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+}
+
+
+/* Text areas */
+
+.form-group textarea {
+  width: 75%;
+  height: 125px;
+
+  padding: 16px 18px;
+
+  border: none;
+  outline: none;
+
+  resize: none;
+
+  background: #dddddd;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+}
+
+
+/* Placeholder text */
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #777777;
+}
+
+
+/* Focus */
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: 2px solid var(--red);
+}
+
+
+/* Submit button */
+
+.feedback-submit {
+  padding: 14px 28px;
+
+  border: none;
+  border-radius: 3px;
+
+  background: var(--red);
+  color: var(--white);
+
+  font-size: 17px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.feedback-submit:hover {
+  background: #d90000;
+}
+
+
+/* =================================
+   Feedback Mobile
+================================= */
+
+@media (max-width: 800px) {
+
+  .feedback-hero {
+    min-height: 160px;
+
+    padding: 28px 30px;
+  }
+
+  .feedback-hero h1 {
+    font-size: 40px;
+  }
+
+  .feedback-hero p {
+    font-size: 19px;
+  }
+
+  .feedback-section {
+    padding: 30px 20px 40px;
+  }
+
+  .feedback-form {
+    min-height: auto;
+
+    padding: 30px 25px;
+  }
+
+  .form-group label {
+    font-size: 20px;
+  }
+
+  .form-group input {
+    width: 100%;
+  }
+
+  .form-group textarea {
+    width: 100%;
+  }
+
+  .feedback-submit {
+    width: 100%;
+
+    padding: 15px;
+  }
+}
+/* =================================
+   HOME PAGE FINAL FIXES
+================================= */
+
+/* Hero sizing */
+.hero {
+  min-height: 305px;
+  padding: 38px 7%;
+}
+
+.hero-text {
+  max-width: 650px;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: 56px;
+  line-height: 1.05;
+}
+
+.hero-text p {
+  margin: 18px 0 35px;
+  font-size: 20px;
+}
+
+
+/* FIX VIEW SCHEDULE BUTTON */
+
+.hero .button,
+.hero .button-dark {
+  display: inline-block;
+
+  padding: 15px 25px;
+
+  background: #000000;
+  color: #ffffff;
+
+  border-radius: 4px;
+
+  text-decoration: none;
+
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.hero .button:hover,
+.hero .button-dark:hover {
+  background: #222222;
+  color: #ffffff;
+}
+
+
+/* Circuit */
+
+.hero-visual {
+  width: 390px;
+  margin-right: 3%;
+}
+
+.hero-visual svg {
+  width: 100%;
+  height: auto;
+}
+
+.hero-visual p {
+  margin-top: 7px;
+  font-size: 14px;
+}
+
+
+/* =================================
+   THREE HOME CARDS
+================================= */
+
+.quick-updates {
+  padding: 30px 5% 35px;
+
+  gap: 38px;
+}
+
+.info-card {
+  min-height: 220px;
+
+  padding: 25px;
+
+  justify-content: center;
+}
+
+.card-icon {
+  height: 65px;
+}
+
+.card-icon svg {
+  width: 58px;
+  height: 58px;
+}
+
+.info-card h2 {
+  margin: 10px 0 9px;
+
+  font-size: 27px;
+}
+
+.info-card p {
+  font-size: 17px;
+  line-height: 1.35;
+}
+
+
+/* =================================
+   LATEST NEWS
+================================= */
+
+.latest-news {
+  width: 82%;
+  max-width: 1100px;
+  min-height: 180px;
+
+  margin: 0 auto 45px;
+
+  grid-template-columns: 220px 1fr 150px;
+
+  padding: 22px 35px;
+}
+
+.news-heading h2 {
+  margin: 0 0 10px;
+
+  font-size: 26px;
+}
+
+.news-image {
+  width: 145px;
+  height: 105px;
+}
+
+.news-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  border-radius: 5px;
+}
+
+.news-content {
+  padding-left: 10px;
+}
+
+.news-content h2 {
+  margin: 0 0 25px;
+
+  font-size: 27px;
+}
+
+.news-content p {
+  font-size: 17px;
+}
+
+.read-more {
+  font-size: 16px;
+
+  color: #ff0000;
+  text-decoration: none;
+}
+
+
+/* =================================
+   FOOTER FIX
+================================= */
+
+.site-footer {
+  min-height: 70px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+
+  padding: 0 32px;
+
+  background: #000000;
+  color: #ffffff;
+}
+
+.footer-brand {
+  font-size: 20px;
+}
+
+.footer-feedback {
+  justify-self: center;
+
+  font-size: 20px;
+}
+
+.footer-feedback a {
+  color: #ff0000;
+
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.social-icons {
+  justify-self: end;
+
+  display: flex;
+  align-items: center;
+
+  gap: 20px;
+}
+
+
+/* Prevent links from getting browser default blue */
+.site-footer a,
+.hero a {
+  text-decoration: none;
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 900px) {
+
+  .hero {
+    min-height: auto;
+
+    flex-direction: column;
+
+    padding: 40px 30px;
+  }
+
+  .hero h1 {
+    font-size: 44px;
+  }
+
+  .hero-visual {
+    width: min(370px, 90%);
+
+    margin: 20px auto 0;
+  }
+
+  .quick-updates {
+    grid-template-columns: 1fr;
+
+    padding: 30px;
+  }
+
+  .latest-news {
+    width: auto;
+
+    grid-template-columns: 1fr;
+
+    margin: 0 30px 40px;
+
+    text-align: center;
+  }
+
+  .news-content {
+    padding-left: 0;
+  }
+
+  .read-more {
+    justify-self: center;
+  }
+}
